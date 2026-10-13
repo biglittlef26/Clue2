@@ -1,10 +1,10 @@
 const app = document.getElementById("app");
-const games = [Decoder, Trivia, Cooking];
+const games = [Decoder, Obby, Cooking];
 const earned = []; // indexes of won games
 
 function intro() {
   app.innerHTML = `<h1>🏒 Off Campus: Clue Quest</h1><p class="intro">${CONFIG.intro}</p><button id="go">Let's play!</button>`;
-  go.onclick = menu;
+  go.onclick = () => { Music.start(); menu(); };
 }
 
 function menu() {
